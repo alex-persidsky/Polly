@@ -1,15 +1,18 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+	<h1>Про мене</h1>
+	<img class="og-image"  src="/poly.jpg" alt="">
+	<p> Я люблю піццу з ананасами. Це все, що вам потрібно знати про мене як особистість...</p>
+	<p>А ще в мене найкращий хлопець у світі, який мене дуже сильно любить :)</p>
+	<p>Ну що тут ще можна додати... блог буде топ!</p>
+</MainLayout>
+
+<style>
+	img {
+		border-radius: 16%;
+	}
+</style>

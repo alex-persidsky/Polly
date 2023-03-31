@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+---
+
+<nav>
+  <div class="logo">
+    <a href="/"> <img src="rofl-logo.png" alt="Polly"></a> 
+  </div>
+
+  <div class="links">
+    <a href="/fashion">Fashion</a>
+    <a href="/design">Design</a>
+    <a href="/tech">Tech</a>
+    <a href="/about">About</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    padding-right: 50px;
+  }
+  img {
+    max-height: 80px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    }
+    @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+    }
+    @-webkit-keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); } 
+    }
+    @keyframes spin { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform:rotate(360deg); 
+        } 
+    }
+  
+  .links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    max-width: 400px;
+    font-size: 18px;
+  }
+</style>
