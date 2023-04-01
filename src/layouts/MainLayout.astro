@@ -3,10 +3,11 @@ import MainHead from "./MainHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+const {title} = Astro.props
 
 ---
 
-	<MainHead></MainHead>
+	<MainHead {title}></MainHead>
 	
   <body>
 		<Header></Header>
