@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout title='404'>
+	<h1>Упс! Цієї сторінки не існує...</h1>
+	<img class="not-found" src="/404.gif" alt="Polly photo" class="og-image"/> 
+	<a class="primary-button" href="/">На головну</a>
+</MainLayout>
+
+<style>
+  .not-found {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    width: 450px;
+    display: inline-block;
+  }
+</style>

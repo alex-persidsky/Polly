@@ -29,9 +29,19 @@ p {
 
 main {
   padding: 40px 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 a {
   text-decoration: none;
   color: black;
 }  
+
+.primary-button {
+  background-color: #24201a;
+  color: #F5EFE6;
+  padding: .5em 1em;
+  border-radius: .5em;
+}
