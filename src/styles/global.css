@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #F5EFE6;
-  color: #24201a;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #24201a;
+  --background-color: #F5EFE6;
 }
 
 body {
@@ -15,16 +19,25 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* overflow: hidden; */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
 }
 
 p {
   font-size: 20px;
 }
 .og-image {
-  max-height: 400px;
-  
-  padding: 30px 0;
+  max-height: 576px;
+  width: 100%;
+  margin: 30px 0;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 main {

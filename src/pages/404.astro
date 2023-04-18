@@ -5,15 +5,24 @@ import "../styles/global.css";
 
 <MainLayout title='404'>
 	<h1>Упс! Цієї сторінки не існує...</h1>
-	<img class="not-found" src="/404.gif" alt="Polly photo" class="og-image"/> 
-	<a class="primary-button" href="/">На головну</a>
+	<div id="image">
+    <img class="not-found" src="/404.gif" alt="Polly photo" class="og-image"/> 
+    <a class="primary-button" href="/">На головну</a>
+  </div>
 </MainLayout>
 
 <style>
   .not-found {
     margin-bottom: 50px;
     margin-top: 20px;
-    width: 450px;
+    width: 500px;
     display: inline-block;
   }
+  #image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
 </style>

@@ -9,24 +9,48 @@ import "../styles/global.css";
   </div>
 
   <div class="links">
-    <a href="/fashion">Fashion</a>
-    <a href="/design">Design</a>
-    <a href="/tech">Tech</a>
-    <a href="/about">About</a>
+    <a href="/fashion">Мода</a>
+    <a href="/design">Дизайн</a>
+    <a href="/tech">Технології</a>
+    <a class="subscribe-button" href="/about">Підписатися</a>
   </div>
 </nav>
 
 <style>
   nav {
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 0px 20px;
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* box-sizing: border-box; */
   }
+
+  .links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 480px;
+    font-size: 18px;
+  }
+  .subscribe-button {
+    border: 2px solid var(--text-color);
+    border-radius: 3rem;
+    border-color: var(--text-color);
+    padding: 10px 30px;
+    margin-left: 10px;
+    transition: 0.25s;
+    /* background-color: aqua; */
+  }
+  .subscribe-button:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+  }
+
+
   .logo {
     padding-right: 50px;
   }
@@ -48,13 +72,4 @@ import "../styles/global.css";
             transform:rotate(360deg); 
         } 
     }
-  
-  .links {
-    display: flex;
-    flex: 1;
-    padding-right: 20px;
-    justify-content: space-between;
-    max-width: 400px;
-    font-size: 18px;
-  }
 </style>
