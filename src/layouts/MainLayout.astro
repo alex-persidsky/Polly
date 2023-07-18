@@ -3,18 +3,24 @@ import MainHead from "./MainHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const {title} = Astro.props
+const {
+  title = "My Astro Blog",
+  description = "My musings about the Astro framework",
+  image,
+  data,
+  robots,
+} = Astro.props;
 
 ---
 
-	<MainHead {title}></MainHead>
-	
-  <body>
-		<Header></Header>
-		<main>
-			<slot/>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainHead {title} {description} {image} {data} {robots}></MainHead>
+
+<body>
+	<Header></Header>
+	<main>
+		<slot/>
+	</main>
+	<Footer />
+</body>
+
 

@@ -10,12 +10,12 @@
 
 :root {
   --text-color: #24201a;
-  --background-color: #F5EFE6;
+  --background-color: #fafafa;
 }
 
 body {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -32,16 +32,17 @@ h1 {
 p {
   font-size: 20px;
 }
-.og-image {
+.hero-image {
   max-height: 576px;
   width: 100%;
   margin: 30px 0;
   object-fit: cover;
   border-radius: 30px;
+  box-shadow: 0 0 1rem #696969;
 }
 
 main {
-  padding: 40px 20px;
+  padding: 20px 20px;
   /* display: flex;
   flex-direction: column;
   justify-content: center; */

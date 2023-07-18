@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import { Image } from "@astrojs/image/components";
+
+// utils imports
+import { slugify, formatDate } from "../utils/utils";
+
+const { data, url } = Astro.props;
+const { title, date, author, image, description, category } = data;
+---
+
+<a href={`/blog/${url}/`} tabindex="-1">
+  <div class="card">
+    <Image class="card-image"
+        src={image.src}
+        alt={image.src}
+        width="640"
+        height="400"
+        fit="cover"
+        format="webp"
+        quality={80}
+        
+      />
+      
+      <div class="heading-container">
+        <h2 class="card-heading">{title}</h2> 
+        <p class="card-category">{category}</p>
+      </div>
+      
+      <p class="card-description">{description}</p>
+  </div>
+</a>
+    
+<style>
+  .card {
+    /* border: 1px solid var(--text-color); */
+    border-radius: 16px;
+    padding: 1.5em;
+    /* border: 1px solid #cdcdcd; */
+    /* background-color: #f2f2f2; */
+  }
+  .card:hover {
+    /* border: 2px solid #707070; */
+    box-shadow: 0 0 2rem #cacaca;
+  }
+
+  .card-image {
+    border-radius: 16px;
+    /* margin-bottom: .5em; */
+  }
+
+  .heading-container {
+    display: flex;
+    align-items: center;
+    margin: .6em 0;
+  }
+
+  .card-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-right: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card-category {
+    font-size: .7rem;
+    font-weight: 500;
+    border: 1px solid var(--text-color);
+    border-radius: 3rem;
+    padding: 4px 14px;
+    /* margin-right: 1rem; */
+    margin-top: .2rem;
+  }
+  
+  .card-description {
+    font-size: 1.15rem;
+  }
+</style>
